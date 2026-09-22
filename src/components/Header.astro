@@ -19,18 +19,16 @@ const t = useTranslations(currentLang);
         <a class="tab" href={`/${currentLang}#education`}>{t("tabs.education")}</a>
     </div>
     <div class="contacts-container">
-        <div class="contacts-container-bg">
-            <label>{t("contacts.title")}:</label>
-            <a href="https://www.github.com/Bielnegri">
-                <img class="icon" src="/Portfolio/github.png" alt="GitHub">
-            </a>
-            <a href="https://www.linkedin.com/in/gabriel-benedito-de-negri">
-                <img class="icon" src="/Portfolio/linkedin.png" alt="Linkedin">
-            </a>
-            <a href="mailto:gabrielbnegri@gmail.com">
-                <img class="icon" src="/Portfolio/enviar.png" alt="Linkedin">
-            </a>
-        </div>
+
+        <a href="https://www.github.com/Bielnegri">
+            <img class="icon" src="/Portfolio/github.png" alt="GitHub">
+        </a>
+        <a href="https://www.linkedin.com/in/gabriel-benedito-de-negri">
+            <img class="icon" src="/Portfolio/linkedin.png" alt="Linkedin">
+        </a>
+        <a href="mailto:gabrielbnegri@gmail.com">
+            <img class="icon" src="/Portfolio/enviar.png" alt="Linkedin">
+        </a>
     </div>
     <div class="language-container">
         <a href={getTargetUrl(currentPath, currentLang,'pt')} class:list={[{active: currentLang === 'pt'}]}>

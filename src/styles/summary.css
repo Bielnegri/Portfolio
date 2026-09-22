@@ -1,5 +1,4 @@
 section {
-    min-height: 40%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -11,7 +10,6 @@ section {
 }
 
 .profile-pic-container {
-    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -32,7 +30,7 @@ section {
 .text-container {
     display: flex;
     flex-direction: column;
-    height: 50%;
+    height: 250px;
     width: 50%;
     align-items: flex-start;
     justify-content: flex-start;
@@ -61,7 +59,7 @@ section {
 .resume-container {
     display: flex;
     flex-direction: column;
-    height: 50%;
+    height: 250px;
     width: 30%;
     align-items: flex-start;
     justify-content: flex-start;
