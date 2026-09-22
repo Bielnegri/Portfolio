@@ -9,17 +9,17 @@ const t = useTranslations(currentLang);
 ---
 
 <header>
-    <div class="owner">
+    <div class="owner-container">
         <p class="name">Gabriel Benedito de Negri</p>
         <p class="jobTitle">{t("title.jobTitle")}</p>
     </div>
-    <div class="tabs">
+    <div class="tabs-container">
         <a class="tab" href={`${baseUrl}/${currentLang}#summary`}>{t("tabs.summary")}</a>
         <a class="tab" href={`/${currentLang}#projects`}>{t("tabs.projects")}</a>
         <a class="tab" href={`/${currentLang}#education`}>{t("tabs.education")}</a>
     </div>
-    <div class="contacts">
-        <div class="contacts-container">
+    <div class="contacts-container">
+        <div class="contacts-container-bg">
             <label>{t("contacts.title")}:</label>
             <a href="https://www.github.com/Bielnegri">
                 <img class="icon" src="/Portfolio/github.png" alt="GitHub">
@@ -32,7 +32,7 @@ const t = useTranslations(currentLang);
             </a>
         </div>
     </div>
-    <div class="language">
+    <div class="language-container">
         <a href={getTargetUrl(currentPath, currentLang,'pt')} class:list={[{active: currentLang === 'pt'}]}>
             <img src="/Portfolio/brazil.png" alt="PT">
         </a>

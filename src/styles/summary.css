@@ -7,6 +7,7 @@ section {
     font-family: 'Inter', sans-serif;
     gap: 50px;
     padding: 50px 100px;
+    margin-bottom: 100px;
 }
 
 .profile-pic-container {
