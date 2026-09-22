@@ -15,21 +15,22 @@ const t = useTranslations(currentLang);
     </div>
     <div class="tabs">
         <a class="tab" href={`${baseUrl}/${currentLang}#summary`}>{t("tabs.summary")}</a>
-        <a class="tab" href={`/${currentLang}#works`}>{t("tabs.works")}</a>
         <a class="tab" href={`/${currentLang}#projects`}>{t("tabs.projects")}</a>
         <a class="tab" href={`/${currentLang}#education`}>{t("tabs.education")}</a>
     </div>
     <div class="contacts">
-        <label>{t("contacts.title")}:</label>
-        <a href="https://www.github.com/Bielnegri">
-            <img class="icon" src="/Portfolio/github.png" alt="GitHub">
-        </a>
-        <a href="https://www.linkedin.com/in/gabriel-benedito-de-negri">
-            <img class="icon" src="/Portfolio/linkedin.png" alt="Linkedin">
-        </a>
-        <a href="mailto:gabrielbnegri@gmail.com">
-            <img class="icon" src="/Portfolio/enviar.png" alt="Linkedin">
-        </a>
+        <div class="contacts-container">
+            <label>{t("contacts.title")}:</label>
+            <a href="https://www.github.com/Bielnegri">
+                <img class="icon" src="/Portfolio/github.png" alt="GitHub">
+            </a>
+            <a href="https://www.linkedin.com/in/gabriel-benedito-de-negri">
+                <img class="icon" src="/Portfolio/linkedin.png" alt="Linkedin">
+            </a>
+            <a href="mailto:gabrielbnegri@gmail.com">
+                <img class="icon" src="/Portfolio/enviar.png" alt="Linkedin">
+            </a>
+        </div>
     </div>
     <div class="language">
         <a href={getTargetUrl(currentPath, currentLang,'pt')} class:list={[{active: currentLang === 'pt'}]}>

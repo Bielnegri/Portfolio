@@ -49,12 +49,20 @@ header {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: right;
+    width: 20%;
+}
+
+.contacts-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     justify-content: center;
-    width: min-content;
     gap: 10px;
     background-color: #303030;
     border-radius: 15px;
     padding: 10px;
+    width: min-content;
 }
 
 .icon {
@@ -71,7 +79,7 @@ header {
     flex-direction: row;
     align-items: center;
     justify-content: right;
-    width: 15%;
+    width: 10%;
 }
 
 .language img {

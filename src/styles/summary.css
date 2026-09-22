@@ -6,7 +6,7 @@ section {
     justify-content: center;
     font-family: 'Inter', sans-serif;
     gap: 50px;
-    padding: 0 100px;
+    padding: 50px 100px;
 }
 
 .profile-pic-container {
@@ -97,7 +97,7 @@ section {
     gap: 2px;
     text-decoration: none;
     color: #000000;
-    padding: 2px;
+    padding: 5px;
 }
 
 .resume-container a:hover {
