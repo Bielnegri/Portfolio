@@ -15,9 +15,11 @@ const fileNameMap = {
 const downloadFileName = fileNameMap[currentLang] || fileNameMap["pt"]
 ---
 
-<section id="summary">
+<section id="summary" class="summary">
     <div class="profile-pic-container">
-        <img class="profile-pic" src="/Portfolio/pfp.jpeg">
+        <div class="profile-pic-bg">
+            <img class="profile-pic" src="/Portfolio/pfp.jpeg">
+        </div>
     </div>
     <div class="text-container">
         <h1>{t("summary.intro")} Gabriel Benedito de Negri!</h1>

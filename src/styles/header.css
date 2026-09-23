@@ -3,8 +3,11 @@ header {
     padding: 20px;
     align-items: center;
     display: flex;
-    background-color: #181818;
+    background-color: #1D2634;
     font-family: 'Montserrat', sans-serif;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .owner-container {
@@ -34,15 +37,19 @@ header {
 
 .tab {
     text-decoration: none;
-    color: #FFFFFF;
+    color: #E6EDE3;
 }
 
 .tab:visited {
-    color: #FFFFFF;
+    color: #E6EDE3;
 }
 
 .tab:hover {
-    color: #B6B6B6;
+    color: #B8D9FF;
+}
+
+.tab:active {
+    filter: brightness(75%);
 }
 
 .contacts-container {
@@ -61,6 +68,10 @@ header {
 
 .icon:hover {
     transform: scale(1.1);
+}
+
+.icon:active {
+    filter: brightness(75%);
 }
 
 .language-container {

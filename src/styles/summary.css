@@ -1,4 +1,4 @@
-section {
+.summary {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -13,25 +13,34 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 15px;
-    background: linear-gradient(135deg, #008cff, #004ef7);
-    border-radius: 20px;
-    box-shadow: 0 8px 20px rgba(0, 123, 255, 0.2);
+    width: 30%;
 }
 
 .profile-pic {
-    height: 300px;
-    width: 300px;
+    position: relative;
+    height: 275px;
+    width: 275px;
     object-fit: cover;
     border-radius: 15px; 
     display: block;
+    z-index: 2;
+}
+
+.profile-pic-bg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(-45deg, #58A6FF, #8AC0FF);
+    border-radius: 20px;
 }
 
 .text-container {
     display: flex;
     flex-direction: column;
     height: 250px;
-    width: 50%;
+    width: 40%;
     align-items: flex-start;
     justify-content: flex-start;
     text-align: justify;
@@ -85,7 +94,7 @@ section {
     display: flex;
     flex-direction: row;
     height: 30px;
-    background-color: #004ef7;
+    background-color: #58A6FF;
     border: 0;
     border-radius: 5px;
     align-items: center;
@@ -104,7 +113,7 @@ section {
 }
 
 .resume-container a:active {
-    background-color: #003bb9;
+    filter: brightness(75%);
 }
 
 .resume-container a:visited {
