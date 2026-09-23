@@ -21,6 +21,7 @@ main {
     overflow-y: auto;
     margin-top: 40px;
     scroll-behavior: smooth;
+    gap: 300px;
 }
 
 main::-webkit-scrollbar {

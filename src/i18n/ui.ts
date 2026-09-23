@@ -30,6 +30,7 @@ export const ui = {
         "resume.title" : "Interessado?",
         "resume.content" : "Baixe meu currículo no botão abaixo ou entre em contato da forma que prefirir. \nBasta escolher o meio desejado na seção de contatos na parte de cima do portfólio!",
         "resume.download" : "Currículo",
+        
     },
 
     en: {

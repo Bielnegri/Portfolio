@@ -1,21 +1,20 @@
 ---
+import type { TranslationFunction, Lang } from '../i18n/utils'
+import ProjectCard from './ProjectCard.astro';
 import '../styles/projects.css';
+
+interface Props {
+    t: TranslationFunction;
+    lang: Lang;
+}
+
+const { t, lang } = Astro.props;
 ---
 
 <section id="projects" class="projects">
-    <div class="project-container">
-        <div class="illustration-container">
-            <div class="illustration-bg">
-                <img class="ilustation"> 
-            </div>
-        </div>
-        <div class="info-container">
-            <div class="description">
-                <p>asdasdasdasdadasda</p>
-            </div>
-            <div class="solutions">
-                <p>asdasdddasdadasdsd</p>
-            </div>
-        </div>
-    </div>
+    <ProjectCard projectId="tcc" t={t} lang={lang}/>
+    <ProjectCard projectId="tcc" t={t} lang={lang}/>
+    <ProjectCard projectId="tcc" t={t} lang={lang}/>
+    <ProjectCard projectId="tcc" t={t} lang={lang}/>
+    <ProjectCard projectId="tcc" t={t} lang={lang}/>
 </section>

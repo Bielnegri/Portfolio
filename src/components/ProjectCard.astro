@@ -1,0 +1,42 @@
+---
+import type { TranslationFunction, Lang } from '../i18n/utils'
+import type { ui } from "../i18n/ui";
+import "../styles/project_card.css";
+
+interface Props {
+  projectId: string;
+  t: TranslationFunction;
+  lang: Lang;
+}
+
+const { projectId, t, lang} = Astro.props;
+
+const titleKey = `projects.${projectId}.title` as keyof typeof ui[typeof lang];
+const descKey = `projects.${projectId}.description` as keyof typeof ui[typeof lang];
+
+const paragraphs = t(descKey) as unknown as string[];
+---
+
+<div class="project-container">
+    <div class="illustration-container">
+        <div class="illustration-bg">
+            <img class="illustration" src="" alt="" />
+        </div>
+    </div>
+    <div class="info-container">
+        <h1>{t(titleKey)}</h1>
+        <div class="description">
+            {Array.isArray(paragraphs) ? (
+                paragraphs.map((p) => <p>{p}</p>)
+            ) : (
+                <p>{paragraphs}</p>
+            )}
+            <a href="#"></a>
+        </div>
+        <div class="technologies">
+            <img src="/Portfolio/github.png" alt="GitHub" />
+            <img src="/Portfolio/github.png" alt="GitHub" />
+            <img src="/Portfolio/github.png" alt="GitHub" />
+        </div>
+    </div>
+</div>

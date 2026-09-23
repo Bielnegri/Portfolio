@@ -1,18 +1,21 @@
 ---
-import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import type { TranslationFunction, Lang } from '../i18n/utils'
 import "../styles/summary.css";
 
-const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, '');
-const currentLang = getLangFromUrl(Astro.url);
-const t = useTranslations(currentLang);
+interface Props {
+    t: TranslationFunction;
+    lang: Lang;
+}
 
+const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, '');
+const { t, lang } = Astro.props;
 const fileNameMap = {
   pt: "Curriculo_Gabriel_Benedito_PT.pdf",
   en: "Resume_Gabriel_Benedito_EN.pdf",
   es: "Curriculum_Gabriel_Benedito_ES.pdf",
 }
 
-const downloadFileName = fileNameMap[currentLang] || fileNameMap["pt"]
+const downloadFileName = fileNameMap[lang] || fileNameMap["pt"]
 ---
 
 <section id="summary" class="summary">
@@ -30,7 +33,7 @@ const downloadFileName = fileNameMap[currentLang] || fileNameMap["pt"]
     <div class="resume-container">
         <h1>{t("resume.title")}</h1>
         <p>{t("resume.content")}</p>
-        <a download={downloadFileName} href={`${baseUrl}/cv-${currentLang}.pdf`}>{t("resume.download")}<img class="button-img" src="/Portfolio/download.png"></a>
+        <a download={downloadFileName} href={`${baseUrl}/cv-${lang}.pdf`}>{t("resume.download")}<img class="button-img" src="/Portfolio/download.png"></a>
         <!-- Adicionar os arquivos de cv para ingles e espanhol -->
     </div>
 </section>

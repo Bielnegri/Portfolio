@@ -1,11 +1,16 @@
 ---
-import { getLangFromUrl, getTargetUrl, useTranslations} from '../i18n/utils';
-import "../styles/header.css";
+import { getTargetUrl } from '../i18n/utils';
+import type { TranslationFunction, Lang } from '../i18n/utils'
+import '../styles/header.css';
+
+interface Props {
+    t: TranslationFunction;
+    lang: Lang;
+}
 
 const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, '');
 const currentPath = Astro.url.pathname;
-const currentLang = getLangFromUrl(Astro.url);
-const t = useTranslations(currentLang);
+const { t, lang } = Astro.props;
 ---
 
 <header>
@@ -14,12 +19,11 @@ const t = useTranslations(currentLang);
         <p class="jobTitle">{t("title.jobTitle")}</p>
     </div>
     <div class="tabs-container">
-        <a class="tab" href={`${baseUrl}/${currentLang}#summary`}>{t("tabs.summary")}</a>
-        <a class="tab" href={`${baseUrl}/${currentLang}#projects`}>{t("tabs.projects")}</a>
-        <a class="tab" href={`${baseUrl}/${currentLang}#education`}>{t("tabs.education")}</a>
+        <a class="tab" href={`${baseUrl}/${lang}#summary`}>{t("tabs.summary")}</a>
+        <a class="tab" href={`${baseUrl}/${lang}#projects`}>{t("tabs.projects")}</a>
+        <a class="tab" href={`${baseUrl}/${lang}#education`}>{t("tabs.education")}</a>
     </div>
     <div class="contacts-container">
-
         <a href="https://www.github.com/Bielnegri">
             <img class="icon" src="/Portfolio/github.png" alt="GitHub">
         </a>
@@ -31,13 +35,13 @@ const t = useTranslations(currentLang);
         </a>
     </div>
     <div class="language-container">
-        <a href={getTargetUrl(currentPath, currentLang,'pt')} class:list={[{active: currentLang === 'pt'}]}>
+        <a href={getTargetUrl(currentPath, lang,'pt')} class:list={[{active: lang === 'pt'}]}>
             <img src="/Portfolio/brazil.png" alt="PT">
         </a>
-        <a href={getTargetUrl(currentPath, currentLang,'en')} class:list={[{active: currentLang === 'en'}]}>
+        <a href={getTargetUrl(currentPath, lang,'en')} class:list={[{active: lang === 'en'}]}>
             <img src="/Portfolio/usa.png" alt="EN">
         </a>
-        <a href={getTargetUrl(currentPath, currentLang,'es')} class:list={[{active: currentLang === 'es'}]}>
+        <a href={getTargetUrl(currentPath, lang,'es')} class:list={[{active: lang === 'es'}]}>
             <img src="/Portfolio/spain.png" alt="ES">
         </a>
     </div>    

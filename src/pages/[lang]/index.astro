@@ -19,9 +19,9 @@ const t = useTranslations(lang as keyof typeof ui);
 ---
 
 <Layout lang={currentLang}>
-	<Header/>
+	<Header t={t} lang={currentLang}/>
   <main>
-    <Summary/>
-    <Projects/>
+    <Summary t={t} lang={currentLang}/>
+    <Projects t={t} lang={currentLang}/>
   </main>
 </Layout>
