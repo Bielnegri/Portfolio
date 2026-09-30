@@ -13,8 +13,6 @@ const { projectId, t, lang} = Astro.props;
 
 const titleKey = `projects.${projectId}.title` as keyof typeof ui[typeof lang];
 const descKey = `projects.${projectId}.description` as keyof typeof ui[typeof lang];
-
-const paragraphs = t(descKey) as unknown as string[];
 ---
 
 <div class="project-container">
@@ -26,17 +24,15 @@ const paragraphs = t(descKey) as unknown as string[];
     <div class="info-container">
         <h1>{t(titleKey)}</h1>
         <div class="description">
-            {Array.isArray(paragraphs) ? (
-                paragraphs.map((p) => <p>{p}</p>)
-            ) : (
-                <p>{paragraphs}</p>
-            )}
-            <a href="#"></a>
+            <p>{t(descKey)}</p>
+            <a href="#">{t("projects.about")}</a>
         </div>
         <div class="technologies">
-            <img src="/Portfolio/github.png" alt="GitHub" />
-            <img src="/Portfolio/github.png" alt="GitHub" />
-            <img src="/Portfolio/github.png" alt="GitHub" />
+            <img src="/Portfolio/html5-original.svg" alt="HTML5" />
+            <img src="/Portfolio/css3-original.svg" alt="CSS3" />
+            <img src="/Portfolio/javascript-original.svg" alt="JavaScript" />
+            <img src="/Portfolio/php-original.svg" alt="PHP" />
+            <img src="/Portfolio/mysql-original.svg" alt="MySQL" />
         </div>
     </div>
 </div>

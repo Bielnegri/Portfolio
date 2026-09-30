@@ -8,24 +8,39 @@
     gap: 40px; 
 }
 
+.project-container:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.project-container:nth-child(even) .info-container,
+.project-container:nth-child(even) .description {
+    align-items: flex-end; 
+    text-align: right;     
+}
+
+.project-container:nth-child(even) .technologies {
+    justify-content: flex-end;
+}
+
 .illustration-container{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40%;
+    width: 30%;
 }
 
 .illustration {
-    height: 400px;
-    width: 400px;
+    height: 350px;
+    width: 350px;
+    border-radius: 15px;
 }
 
 .illustration-bg {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 425px;
-    width: 425px;
+    height: 375px;
+    width: 375px;
     background: linear-gradient(-45deg, #58A6FF, #8AC0FF);
     border-radius: 20px;
 }
@@ -35,7 +50,8 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    width: 60%;
+    width: 70%;
+    gap: 30px;
 }
 
 .description {
@@ -43,14 +59,21 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    text-align: justify;
-    gap: 10px;
-    height: 300px;
+    text-align: left;
+    max-width: 600px;
+    gap: 30px;
+}
+
+.info-container h1 {
+    font-size: 27px;
 }
 
 .description p {
     font-size: 17px;
-    white-space: pre-line;
+}
+
+.description p,
+.info-container h1 {
     margin: 0;
 }
 

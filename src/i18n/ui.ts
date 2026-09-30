@@ -30,7 +30,9 @@ export const ui = {
         "resume.title" : "Interessado?",
         "resume.content" : "Baixe meu currículo no botão abaixo ou entre em contato da forma que prefirir. \nBasta escolher o meio desejado na seção de contatos na parte de cima do portfólio!",
         "resume.download" : "Currículo",
-        
+        "projects.about" : "Saiba mais",
+        "projects.tcc.title" : "Sistema Web de Gestão de Estoque (TCC)",
+        "projects.tcc.description" : "Plataforma web desenvolvida para otimizar o controle e a rastreabilidade de produtos, concebida em colaboração com a equipe de Administração para atender às demandas operacionais e estratégicas da empresa.",
     },
 
     en: {
