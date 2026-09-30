@@ -5,11 +5,13 @@ import "../styles/project_card.css";
 
 interface Props {
   projectId: string;
+  illustration : string;
+  technologies : { src: string; alt: string }[];
   t: TranslationFunction;
   lang: Lang;
 }
 
-const { projectId, t, lang} = Astro.props;
+const { projectId, illustration, technologies, t, lang} = Astro.props;
 
 const titleKey = `projects.${projectId}.title` as keyof typeof ui[typeof lang];
 const descKey = `projects.${projectId}.description` as keyof typeof ui[typeof lang];
@@ -18,7 +20,7 @@ const descKey = `projects.${projectId}.description` as keyof typeof ui[typeof la
 <div class="project-container">
     <div class="illustration-container">
         <div class="illustration-bg">
-            <img class="illustration" src="" alt="" />
+            <img class="illustration" src={illustration} alt={t(titleKey)} />
         </div>
     </div>
     <div class="info-container">
@@ -28,11 +30,9 @@ const descKey = `projects.${projectId}.description` as keyof typeof ui[typeof la
             <a href="#">{t("projects.about")}</a>
         </div>
         <div class="technologies">
-            <img src="/Portfolio/html5-original.svg" alt="HTML5" />
-            <img src="/Portfolio/css3-original.svg" alt="CSS3" />
-            <img src="/Portfolio/javascript-original.svg" alt="JavaScript" />
-            <img src="/Portfolio/php-original.svg" alt="PHP" />
-            <img src="/Portfolio/mysql-original.svg" alt="MySQL" />
+            {technologies.map((tech) => (
+                <img src={tech.src} alt={tech.alt} />
+            ))}
         </div>
     </div>
 </div>

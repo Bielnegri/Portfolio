@@ -12,9 +12,72 @@ const { t, lang } = Astro.props;
 ---
 
 <section id="projects" class="projects">
-    <ProjectCard projectId="tcc" t={t} lang={lang}/>
-    <ProjectCard projectId="muttley" t={t} lang={lang}/>
-    <ProjectCard projectId="" t={t} lang={lang}/>
-    <ProjectCard projectId="" t={t} lang={lang}/>
-    <ProjectCard projectId="" t={t} lang={lang}/>
+    <ProjectCard 
+        projectId="tcc"
+        illustration=""
+        technologies={[
+            { src: "/Portfolio/html5-original.svg", alt: "HTML5" },
+            { src: "/Portfolio/css3-original.svg", alt: "CSS3" },
+            { src: "/Portfolio/javascript-original.svg", alt: "JavaScript" },
+            { src: "/Portfolio/php-original.svg", alt: "PHP" },
+            { src: "/Portfolio/mysql-original.svg", alt: "MySQL" },
+            { src: "/Portfolio/apache-original.svg", alt: "Apache" }
+        ]}
+        t={t}
+        lang={lang}
+    />
+    <ProjectCard 
+        projectId="muttley" 
+        illustration=""
+        technologies={[
+            { src: "/Portfolio/java-original.svg", alt: "Java" },
+            { src: "/Portfolio/spring-original.svg", alt: "Spring" },
+            { src: "/Portfolio/thymeleaf-original.svg", alt: "Thymeleaf" },
+            { src: "/Portfolio/maven-original.svg", alt: "Maven" },
+            { src: "/Portfolio/react-original.svg", alt: "React" },
+            { src: "/Portfolio/vite-original.svg", alt: "Vite" },
+            { src: "/Portfolio/css3-original.svg", alt: "CSS3" },
+            { src: "/Portfolio/mysql-original.svg", alt: "MySQL" },
+            { src: "/Portfolio/apache-original.svg", alt: "Apache" },
+            { src: "/Portfolio/apachekafka-original.svg", alt: "Apache Kafka" },
+            { src: "/Portfolio/docker-original.svg", alt: "Docker" }
+        ]}
+        t={t} lang={lang}
+    />
+    <ProjectCard 
+        projectId="" 
+        illustration=""
+        technologies={[
+            { src: "", alt: "" },
+            { src: "", alt: "" },
+            { src: "", alt: "" },
+            { src: "", alt: "" },
+            { src: "", alt: "" }
+        ]}
+        t={t} lang={lang}
+    />
+    <ProjectCard 
+        projectId="" 
+        illustration=""
+        technologies={[
+            { src: "", alt: "" },
+            { src: "", alt: "" },
+            { src: "", alt: "" },
+            { src: "", alt: "" },
+            { src: "", alt: "" }
+        ]}
+        t={t} lang={lang}
+    />
+    <ProjectCard 
+        projectId="" 
+        illustration=""
+        technologies={[
+            { src: "", alt: "" },
+            { src: "", alt: "" },
+            { src: "", alt: "" },
+            { src: "", alt: "" },
+            { src: "", alt: "" }
+        ]}
+        t={t} lang={lang}
+    />
 </section>

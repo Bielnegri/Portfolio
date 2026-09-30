@@ -31,8 +31,10 @@ export const ui = {
         "resume.content" : "Baixe meu currículo no botão abaixo ou entre em contato da forma que prefirir. \nBasta escolher o meio desejado na seção de contatos na parte de cima do portfólio!",
         "resume.download" : "Currículo",
         "projects.about" : "Saiba mais",
-        "projects.tcc.title" : "Sistema Web de Gestão de Estoque (TCC)",
+        "projects.tcc.title" : "Sistema Web de Gestão de Estoque ─ TCC",
         "projects.tcc.description" : "Plataforma web desenvolvida para otimizar o controle e a rastreabilidade de produtos, concebida em colaboração com a equipe de Administração para atender às demandas operacionais e estratégicas da empresa.",
+        "projects.muttley.title" : "Gerenciador de Eventos ─ Muttley",
+        "projects.muttley.description" : "Plataforma web para o controle das informações dos eventos da faculdade e demais funcionalidades como geração de certificados em PDF, QR codes para inscrições e envio de e-mails para os participantes.",
     },
 
     en: {
