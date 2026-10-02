@@ -6,6 +6,7 @@ import Projects from '../../components/Projects.astro';
 import { ui, languages } from '../../i18n/ui';
 import { useTranslations } from '../../i18n/utils';
 import '../../styles/page.css';
+import Contacts from '../../components/Contacts.astro';
 
 export function getStaticPaths() {
   return Object.keys(languages).map((lang) => ({
@@ -23,5 +24,6 @@ const t = useTranslations(lang as keyof typeof ui);
   <main>
     <Summary t={t} lang={currentLang}/>
     <Projects t={t} lang={currentLang}/>
+    <Contacts t={t} lang={currentLang}/>
   </main>
 </Layout>

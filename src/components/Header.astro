@@ -18,21 +18,10 @@ const { t, lang } = Astro.props;
         <p class="name">Gabriel Benedito de Negri</p>
         <p class="jobTitle">{t("title.jobTitle")}</p>
     </div>
-    <div class="tabs-container">
-        <a class="tab" href={`${baseUrl}/${lang}#summary`}>{t("tabs.summary")}</a>
+    <div class="header-tabs-container">
         <a class="tab" href={`${baseUrl}/${lang}#projects`}>{t("tabs.projects")}</a>
         <a class="tab" href={`${baseUrl}/${lang}#education`}>{t("tabs.education")}</a>
-    </div>
-    <div class="contacts-container">
-        <a href="https://www.github.com/Bielnegri" target="_blank">
-            <img class="icon" src="/Portfolio/github.png" alt="GitHub">
-        </a>
-        <a href="https://www.linkedin.com/in/gabriel-benedito-de-negri" target="_blank">
-            <img class="icon" src="/Portfolio/linkedin.png" alt="Linkedin">
-        </a>
-        <a href="mailto:gabrielbnegri@gmail.com" target="_blank">
-            <img class="icon" src="/Portfolio/enviar.png" alt="Linkedin">
-        </a>
+        <a class="tab" href={`${baseUrl}/${lang}#contacts`}>{t("tabs.contacts")}</a>
     </div>
     <div class="language-container">
         <a href={getTargetUrl(currentPath, lang,'pt')} class:list={[{active: lang === 'pt'}]}>

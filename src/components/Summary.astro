@@ -9,13 +9,7 @@ interface Props {
 
 const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, '');
 const { t, lang } = Astro.props;
-const fileNameMap = {
-  pt: "Curriculo_Gabriel_Benedito_PT.pdf",
-  en: "Resume_Gabriel_Benedito_EN.pdf",
-  es: "Curriculum_Gabriel_Benedito_ES.pdf",
-}
 
-const downloadFileName = fileNameMap[lang] || fileNameMap["pt"]
 ---
 
 <section id="summary" class="summary">
@@ -33,7 +27,5 @@ const downloadFileName = fileNameMap[lang] || fileNameMap["pt"]
     <div class="resume-container">
         <h1>{t("resume.title")}</h1>
         <p>{t("resume.content")}</p>
-        <a download={downloadFileName} href={`${baseUrl}/cv-${lang}.pdf`}>{t("resume.download")}<img class="button-img" src="/Portfolio/download.png"></a>
-        <!-- Adicionar os arquivos de cv para ingles e espanhol -->
     </div>
 </section>

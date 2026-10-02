@@ -1,0 +1,66 @@
+---
+import type { TranslationFunction, Lang } from '../i18n/utils'
+import type { ui } from "../i18n/ui";
+import '../styles/contacts.css';
+
+interface Props {
+    t: TranslationFunction;
+    lang: Lang;
+}
+
+const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, '');
+const { t, lang} = Astro.props;
+
+const fileNameMap = {
+  pt: "Curriculo_Gabriel_Benedito_PT.pdf",
+  en: "Resume_Gabriel_Benedito_EN.pdf",
+  es: "Curriculum_Gabriel_Benedito_ES.pdf",
+}
+
+const downloadFileName = fileNameMap[lang] || fileNameMap["pt"]
+---
+
+<section id="contacts" class="contacts">
+    <div class="title">
+        <h1>{t("contacts.title")}</h1>
+        <h2>{t("contacts.message")}</h2>
+    </div>
+    <div class="contacts-info-container">
+        <div class="contacts-tabs-container">
+            <label>Navegação</label>
+            <div>
+                <a class="tab" href={`${baseUrl}/${lang}#projects`}>{t("tabs.projects")}</a>
+                <a class="tab" href={`${baseUrl}/${lang}#education`}>{t("tabs.education")}</a>
+                <a class="tab" href={`${baseUrl}/${lang}#contacts`}>{t("tabs.contacts")}</a>
+            </div>
+        </div>
+        <div class="contacts-container">
+            <label>Redes Sociais</label>
+            <div>
+                <a class="contact" href="https://www.github.com/Bielnegri" target="_blank">
+                    <img src="/Portfolio/github.png" alt="GitHub">
+                    <span>Github</span>
+                </a>
+                <a class="contact" href="https://www.linkedin.com/in/gabriel-benedito-de-negri" target="_blank">
+                    <img src="/Portfolio/linkedin.png" alt="Linkedin">
+                    <span>Linkedin</span>
+                </a>
+                <a class="contact" href="mailto:gabrielbnegri@gmail.com" target="_blank">
+                    <img src="/Portfolio/enviar.png" alt="E-mail">
+                    <span>E-mail</span>
+                </a>
+            </div>
+        </div>
+        <div class="btns-container">
+            <label>Outros</label>
+            <a class="resume" download={downloadFileName} href={`${baseUrl}/cv-${lang}.pdf`}>{t("contacts.others.download")}<img class="button-img" src="/Portfolio/download.png"></a>
+            <a class="tab" href={`${baseUrl}/${lang}#summary`}>{t("contacts.others.start")} <img class="button-img" src="/Portfolio/up.png"></a>
+            <!-- Adicionar os arquivos de cv para ingles e espanhol -->
+        </div>
+    </div>
+    <div class="signature">
+        <p>© 2026 Gabriel Benedito de Negri. Feito com amor, carinho, HTML e CSS.</p>
+    </div>
+</section>
+
+
