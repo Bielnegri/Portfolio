@@ -14,7 +14,9 @@ const { t, lang } = Astro.props;
 <section id="projects" class="projects">
     <ProjectCard 
         projectId="tcc"
+        privateProj={false}
         illustration=""
+        about="https://github.com/Bielnegri/TCC-Etec"
         technologies={[
             { src: "/Portfolio/html5-original.svg", alt: "HTML5" },
             { src: "/Portfolio/css3-original.svg", alt: "CSS3" },
@@ -27,8 +29,10 @@ const { t, lang } = Astro.props;
         lang={lang}
     />
     <ProjectCard 
-        projectId="muttley" 
+        projectId="muttley"
+        privateProj={false}
         illustration=""
+        about="https://github.com/Bielnegri/Backend-Muttley"
         technologies={[
             { src: "/Portfolio/java-original.svg", alt: "Java" },
             { src: "/Portfolio/spring-original.svg", alt: "Spring" },
@@ -37,6 +41,7 @@ const { t, lang } = Astro.props;
             { src: "/Portfolio/react-original.svg", alt: "React" },
             { src: "/Portfolio/vite-original.svg", alt: "Vite" },
             { src: "/Portfolio/css3-original.svg", alt: "CSS3" },
+            { src: "/Portfolio/typescript-original.svg", alt: "TypeScript" },
             { src: "/Portfolio/mysql-original.svg", alt: "MySQL" },
             { src: "/Portfolio/apache-original.svg", alt: "Apache" },
             { src: "/Portfolio/apachekafka-original.svg", alt: "Apache Kafka" },
@@ -45,38 +50,55 @@ const { t, lang } = Astro.props;
         t={t} lang={lang}
     />
     <ProjectCard 
-        projectId="" 
+        projectId="lanch"
+        privateProj={false} 
         illustration=""
+        about="https://github.com/Bielnegri/Lanchonete-API-REST"
         technologies={[
-            { src: "", alt: "" },
-            { src: "", alt: "" },
-            { src: "", alt: "" },
-            { src: "", alt: "" },
-            { src: "", alt: "" }
+            { src: "/Portfolio/java-original.svg", alt: "Java" },
+            { src: "/Portfolio/spring-original.svg", alt: "Spring" },
+            { src: "/Portfolio/thymeleaf-original.svg", alt: "Thymeleaf" },
+            { src: "/Portfolio/maven-original.svg", alt: "Maven" },
+            { src: "/Portfolio/reactnative-original.svg", alt: "React Native" },
+            { src: "/Portfolio/expo-original.svg", alt: "Expo" },
+            { src: "/Portfolio/css3-original.svg", alt: "CSS3" },
+            { src: "/Portfolio/typescript-original.svg", alt: "TypeScript" },
+            { src: "/Portfolio/mysql-original.svg", alt: "MySQL" },
+            { src: "/Portfolio/apache-original.svg", alt: "Apache" }
         ]}
         t={t} lang={lang}
     />
     <ProjectCard 
-        projectId="" 
+        projectId="caixa"
+        privateProj={false} 
         illustration=""
+        about="https://github.com/Bielnegri/CaixaEletronicoJava"
         technologies={[
-            { src: "", alt: "" },
-            { src: "", alt: "" },
-            { src: "", alt: "" },
-            { src: "", alt: "" },
-            { src: "", alt: "" }
+            { src: "/Portfolio/java-original.svg", alt: "Java" }
         ]}
         t={t} lang={lang}
     />
     <ProjectCard 
-        projectId="" 
+        projectId="mods"
+        privateProj={true}
         illustration=""
+        about=""
         technologies={[
-            { src: "", alt: "" },
-            { src: "", alt: "" },
-            { src: "", alt: "" },
-            { src: "", alt: "" },
-            { src: "", alt: "" }
+            { src: "/Portfolio/javascript-original.svg", alt: "JavaScript" },
+            { src: "/Portfolio/nodejs-original.svg", alt: "Node js" },
+            { src: "/Portfolio/go-original.svg", alt: "Go" },
+            { src: "/Portfolio/xml-original.svg", alt: "XML" }
+        ]}
+        t={t} lang={lang}
+    />
+    <ProjectCard 
+        projectId="mntc"
+        privateProj={true} 
+        illustration=""
+        about="https://github.com/Bielnegri/Maintenance-Automation"
+        technologies={[
+            { src: "/Portfolio/python-original.svg", alt: "Python" },
+            { src: "/Portfolio/powershell-original.svg", alt: "Powershell" }
         ]}
         t={t} lang={lang}
     />

@@ -35,6 +35,14 @@ export const ui = {
         "projects.tcc.description" : "Plataforma web desenvolvida para otimizar o controle e a rastreabilidade de produtos, concebida em colaboração com a equipe de Administração para atender às demandas operacionais e estratégicas da empresa.",
         "projects.muttley.title" : "Gerenciador de Eventos ─ Muttley",
         "projects.muttley.description" : "Plataforma web para o controle das informações dos eventos da faculdade e demais funcionalidades como geração de certificados em PDF, QR codes para inscrições e envio de e-mails para os participantes.",
+        "projects.lanch.title" : "Lanchonete App ─ Controle de Cardápio",
+        "projects.lanch.description" : "Aplicativo mobile para realizar o controle dos itens do cardápio de uma lanchonete, permitindo uma visualização mais clara dos produtos no menu e a personalização deles conforme necessário.",
+        "projects.caixa.title" : "Caixa Eletrônico",
+        "projects.caixa.description" : "Sistema Java que simula o funcionamento de um caixa eletrônico, com funcionalidades de carregamento de notas, saque e relatório de estatístico para cada banco prestando serviço no programa.",
+        "projects.mntc.title" : "Automação para Manutenção Preventiva",
+        "projects.mntc.description" : "Projeto para automatizar o processo de manutenção preventiva realizado nos computadores da empresa, com o objetivo de facilitar e otimizar o tempo gasto durante a realização das etapas dele.",
+        "projects.mods.title" : "Módulos para Sistema Legado",
+        "projects.mods.description" : "Módulos desenvolvidos com linguagens modernas para permitir que o sistema legado da empresa utilize de funcionalidades modernas, no caso, realizar requisições e cosultas de API",
     },
 
     en: {

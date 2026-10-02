@@ -4,14 +4,16 @@ import type { ui } from "../i18n/ui";
 import "../styles/project_card.css";
 
 interface Props {
-  projectId: string;
-  illustration : string;
-  technologies : { src: string; alt: string }[];
-  t: TranslationFunction;
-  lang: Lang;
+    projectId: string;
+    privateProj : boolean;
+    illustration : string;
+    about : string;
+    technologies : { src: string; alt: string }[];
+    t: TranslationFunction;
+    lang: Lang;
 }
 
-const { projectId, illustration, technologies, t, lang} = Astro.props;
+const { projectId, privateProj, illustration, about, technologies, t, lang} = Astro.props;
 
 const titleKey = `projects.${projectId}.title` as keyof typeof ui[typeof lang];
 const descKey = `projects.${projectId}.description` as keyof typeof ui[typeof lang];
@@ -27,7 +29,7 @@ const descKey = `projects.${projectId}.description` as keyof typeof ui[typeof la
         <h1>{t(titleKey)}</h1>
         <div class="description">
             <p>{t(descKey)}</p>
-            <a href="#">{t("projects.about")}</a>
+            {!privateProj && <a href={about} target="_blank">{t("projects.about")}</a>}
         </div>
         <div class="technologies">
             {technologies.map((tech) => (
